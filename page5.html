@@ -48,30 +48,26 @@
            LETTER TEXT
         ========================= */
 
-        .letter {
+     .letter {
     position: absolute;
 
     left: 31.5%;
     top: 38%;
-
     width: 37%;
     height: 55%;
 
     padding: 0;
-
     overflow: hidden;
 
     color: #111;
-
     font-family: Arial, sans-serif;
 
-    font-size: clamp(6px, 0.62vw, 10px);
-
-    line-height: 1.18;
-
+    font-size: 9px;
+    line-height: 1.2;
     text-align: left;
 }
-       .letter p {
+
+.letter p {
     margin: 0 0 4px 0;
 }
         /* =========================
@@ -175,7 +171,22 @@
 
             transform: translateX(-4px);
         }
+@media (max-width: 600px) {
 
+    .letter {
+        font-size: 8px;
+        line-height: 1.12;
+
+        left: 31.5%;
+        top: 37%;
+        width: 37%;
+        height: 58%;
+    }
+
+    .letter p {
+        margin-bottom: 3px;
+    }
+}
     </style>
 </head>
 
