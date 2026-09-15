@@ -48,28 +48,34 @@
            LETTER TEXT
         ========================= */
 
-     ..letter {
+     .letter {
     position: absolute;
 
-    left: 31.5%;
-    top: 33%;
-    width: 37%;
-    height: 60%;
+    /* Position the text inside the paper */
+    left: 22%;
+    top: 32%;
+
+    width: 56%;
+    height: 61%;
 
     padding: 0;
     overflow: hidden;
 
     color: #111;
-    font-family: Arial, sans-serif;
 
+    font-family: Georgia, "Times New Roman", serif;
+
+    /* Slightly bigger + italic */
     font-size: 10px;
-    line-height: 1.25;
     font-style: italic;
+    line-height: 1.3;
 
     text-align: left;
 }
 
 .letter p {
+    margin: 0 0 5px 0;
+}
     margin: 0 0 5px 0;
 }
         /* =========================
@@ -176,17 +182,18 @@
 @media (max-width: 600px) {
 
     .letter {
-        font-size: 8px;
-        line-height: 1.12;
+        left: 22%;
+        top: 32%;
+        width: 56%;
+        height: 61%;
 
-        left: 31.5%;
-        top: 37%;
-        width: 37%;
-        height: 58%;
+        font-size: 10px;
+        line-height: 1.3;
+        font-style: italic;
     }
 
     .letter p {
-        margin-bottom: 3px;
+        margin-bottom: 5px;
     }
 }
     </style>
