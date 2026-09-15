@@ -13,37 +13,23 @@
     <style>
 
         * {
-
             margin: 0;
-
             padding: 0;
-
             box-sizing: border-box;
-
         }
 
         html,
-
         body {
-
             width: 100%;
-
             height: 100%;
-
             overflow: hidden;
-
             background: black;
-
         }
 
         body {
-
             display: flex;
-
             justify-content: center;
-
             align-items: center;
-
         }
 
         /* =========================
@@ -51,135 +37,84 @@
         ========================= */
 
         .page {
-
             position: relative;
-
             width: min(100vw, calc(100vh * 1.40625));
-
             height: min(100vh, calc(100vw / 1.40625));
-
             background-image: url("page5.jpeg");
-
             background-size: 100% 100%;
-
             background-position: center;
-
             background-repeat: no-repeat;
-
         }
 
         /* =========================
            LETTER TEXT
         ========================= */
 
-     .letter {
+        .letter {
+            position: absolute;
+            left: 31.5%;
+            top: 38%;
+            width: 37%;
+            height: 55%;
+            padding: 0;
+            overflow: hidden;
+            color: #111;
+            font-family: Arial, sans-serif;
+            font-size: 9px;
+            line-height: 1.2;
+            text-align: left;
+            font-style: normal;
+            font-weight: normal;
+        }
 
-    position: absolute;
-
-    left: 31.5%;
-
-    top: 38%;
-
-    width: 37%;
-
-    height: 55%;
-
-    padding: 0;
-
-    overflow: hidden;
-
-    color: #111;
-
-    font-family: Arial, sans-serif;
-
-    font-size: 9px;
-
-    line-height: 1.2;
-
-    text-align: left;
-
-}
-
-.letter p {
-
-    margin: 0 0 4px 0;
-
-}
+        .letter p {
+            margin: 0 0 4px 0;
+            font-style: normal;
+            font-weight: normal;
+        }
 
         /* =========================
            HOME
         ========================= */
 
         .home {
-
             position: absolute;
-
             top: 5%;
-
             right: 9%;
-
             width: 30px;
-
             height: 30px;
-
             border-radius: 50%;
-
             background: #b00050;
-
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
             text-decoration: none;
-
             transition: transform 0.2s ease;
-
         }
 
         .home::before {
-
             content: "";
-
             position: absolute;
-
             width: 10px;
-
             height: 10px;
-
             border-left: 2px solid #260018;
-
             border-top: 2px solid #260018;
-
             transform: rotate(45deg);
-
             top: 6px;
-
         }
 
         .home::after {
-
             content: "";
-
             position: absolute;
-
             width: 11px;
-
             height: 9px;
-
             border: 2px solid #260018;
-
             border-top: none;
-
             bottom: 6px;
-
         }
 
         .home:hover {
-
             transform: scale(1.12);
-
         }
 
         /* =========================
@@ -187,76 +122,54 @@
         ========================= */
 
         .back {
-
             position: absolute;
-
             left: 3%;
-
             bottom: 1%;
-
             width: 105px;
-
             height: 45px;
-
             display: flex;
-
             align-items: center;
-
             justify-content: center;
-
             border-radius: 25px;
-
             background: rgba(255, 255, 255, 0.08);
-
             border: 1px solid rgba(255, 255, 255, 0.3);
-
             color: white;
-
             text-decoration: none;
-
             font-family: Arial, sans-serif;
-
             font-size: 13px;
-
             font-weight: bold;
-
             transition: all 0.25s ease;
-
         }
 
         .back:hover {
-
             background: rgba(255, 255, 255, 0.18);
-
             transform: translateX(-4px);
-
         }
 
-@media (max-width: 600px) {
+        /* =========================
+           MOBILE
+        ========================= */
 
-    .letter {
+        @media (max-width: 600px) {
 
-        font-size: 8px;
+            .letter {
+                font-size: 8px;
+                line-height: 1.12;
+                left: 31.5%;
+                top: 37%;
+                width: 37%;
+                height: 58%;
+                font-style: normal;
+                font-weight: normal;
+            }
 
-        line-height: 1.12;
+            .letter p {
+                margin-bottom: 3px;
+                font-style: normal;
+                font-weight: normal;
+            }
 
-        left: 31.5%;
-
-        top: 37%;
-
-        width: 37%;
-
-        height: 58%;
-
-    }
-
-    .letter p {
-
-        margin-bottom: 3px;
-
-    }
-
-}
+        }
 
     </style>
 
@@ -269,18 +182,18 @@
         <!-- HOME -->
 
         <a href="index.html"
-
            class="home"
-
            aria-label="Home">
-
         </a>
+
 
         <!-- LETTER -->
 
         <div class="letter">
 
-            <p>Dear Riya,</p>
+            <p>
+                Dear Riya,
+            </p>
 
             <p>
                 Happy Birthday, dear! ❤️ Hope this year makes you truly happy
@@ -321,12 +234,17 @@
                 You deserve it all. ❤️😘
             </p>
 
+            <p>
+                Yours lovingly,<br>
+                Binish
+            </p>
+
         </div>
+
 
         <!-- BACK -->
 
         <a href="page4.html"
-
            class="back">
 
             BACK
